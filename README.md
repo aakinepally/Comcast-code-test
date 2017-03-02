@@ -80,7 +80,7 @@ runcmd:
 - service ldap start
 
 =============================================================================
-2. This can be achived using cloud-init or ansible 
+2.This can be achived using cloud-init or ansible 
 ansible -i inventory2 playbook1.yml
 ====================================================================
 cat inventory2
@@ -156,7 +156,7 @@ cat solution2.yml
 ===============================================================	
 6. From git bash:
 git clone ****
-git init .           (git init /path_to_dir)
+git init .  (git init /path_to_dir)
 ls -al
 git status           
 git add .  
