@@ -1,0 +1,12 @@
+- hosts: floatingIP
+  sudo: true
+  gather_facts: no
+  tasks:
+  - name: Install  NTP
+    shell: yum install -y ntp
+	
+  - name: add the network range you allow to receive requests
+    shell: echo "restrict 10.0.0.0 mask 255.255.255.0 nomodify notrap" >> /etc/ntp.conf 
+
+  - name: configure ntp
+    shell: echo "server ntp1.jst.mfeed.ad.jp iburst" >> /etc/ntp.conf
