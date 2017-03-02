@@ -1,0 +1,12 @@
+- hosts: <floatingIP>
+  sudo: true
+  gather_facts: no
+  tasks:
+  - name: add group
+    shell: groupadd techops_dba
+	
+  - name: Adding sudoers
+    shell: echo "%techops_dba ALL=(ALL)   ALL " >> /etc/sudoers/
+  
+  - name: Adding to access.conf
+    shell: echo "+ : @techops_dba user : ALL" >> /etc/security/access.conf
