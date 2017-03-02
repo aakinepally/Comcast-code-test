@@ -12,12 +12,12 @@
   
   - name: 2-verify /etc/security/access.conf
     shell: cat /etc/security/access.conf
-	register: access_conf
+    register: access_conf
   - debug: var=access_conf
   
   - name: 3-get NTP startum value 
     shell: ntpdc -c sysinfo 
-	register: result
+    register: result
   - debug: var=result 
    
   - name: 4-ping
