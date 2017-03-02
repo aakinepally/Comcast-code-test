@@ -1,0 +1,5 @@
+#!/bin/bash 
+runcmd:
+- yum install *openldap* -y
+- chkconfig --levels 235 ldap on
+- service ldap start
