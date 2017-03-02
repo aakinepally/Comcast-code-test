@@ -1,0 +1,18 @@
+- hosts: localhost
+  sudo: true
+  gather_facts: no
+  tasks:
+  - name: create stack
+    ignore_errors: True
+    register: stack_create
+    os_stack:
+     auth:
+       auth_url: http://XXXXXXX:5000/v2.0
+       username: user1
+       password: xxxxx123
+       project_name: qwerty
+     name: ansible_stack
+     state: present
+     template: "/root/heat/techops.yml"
+     environment:
+     - /root/heat/techops.env 
