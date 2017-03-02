@@ -1,0 +1,2 @@
+[floatingip]
+centos-openclient.localdomain ansible_ssh_host=<floating ip of host1> ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=root 
